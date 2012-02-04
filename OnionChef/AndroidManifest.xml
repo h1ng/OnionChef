@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.onionchef"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="7" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".OC0_LoadingScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".OC1_Register"></activity>
+        <activity android:name=".OC2_LogIn"></activity>
+        <activity android:name=".OC3_NearbyRestaurants"></activity>
+        <activity android:name=".OC4_Restaurant"></activity>
+        <activity android:name=".OC5_Dish"></activity>
+        <activity android:name=".OC6_Profile"></activity>
+        <activity android:name=".OC7_0_Discover"></activity>
+        <activity android:name=".OC7_1_PicPreview"></activity>
+        <activity android:name=".OC7_1_NameDish"></activity>
+        <activity android:name=".OC7_2_RateComment"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    //top bar start
+    <ImageView
+        android:id="@+id/image_TopBar"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/image_main_bar"
+        android:src="@drawable/image_main_bar" />
+
+    <ImageView
+        android:id="@+id/button_Back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@string/button_back"
+        android:src="@drawable/button_back" 
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/button_Forward"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@string/button_forward"
+        android:src="@drawable/button_forward" 
+        android:clickable="true"/>
+    //top bar end 
+
+  <ImageView
+        android:id="@+id/image_PicPreview"
+        android:layout_width="fill_parent"
+        android:layout_height="230dp"
+        android:layout_below="@+id/image_TopBar"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/image_picpreview"
+        android:src="@drawable/frame_previewdish" />
+
+  //overlay start (linked to every image that is uploaded by users)
+   <TextView
+       android:id="@+id/label_DishRest"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignBottom="@+id/image_PicPreview"
+       android:layout_alignLeft="@+id/image_PicPreview"
+       android:layout_marginBottom="20dp"
+       android:layout_marginLeft="15dp"
+       android:text="Dish Name @ Restaurant Name"
+       android:textSize="10dp" />
+  
+    <ImageView
+        android:id="@+id/image_OCLogo"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/image_PicPreview"
+        android:layout_marginBottom="17dp"
+        android:layout_toLeftOf="@+id/label_NameTime"
+        android:layout_marginRight="5dp"
+        android:contentDescription="@string/image_oclogo"
+        android:src="@drawable/image_other_moustache" />
+  
+  	<TextView
+      	android:id="@+id/label_NameTime"
+      	android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:layout_alignBottom="@+id/label_DishRest"
+      	android:layout_alignRight="@+id/image_PicPreview"
+      	android:layout_marginRight="15dp"
+      	android:text="Name Time"
+      	android:textSize="10dp" />
+ 	//overlay end
+  
+	//bot bar start
+    <ImageView
+        android:id="@+id/image_BotBar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/image_main_bar"
+        android:src="@drawable/image_main_bar" />
+
+    <ImageView
+        android:id="@+id/button_User"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/button_user"
+        android:src="@drawable/button_user" 
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/button_Chef"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/button_User"
+        android:layout_toRightOf="@+id/button_User"
+        android:layout_marginLeft="45dp"
+        android:contentDescription="@string/button_chef"
+        android:src="@drawable/button_chef"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/button_Profile"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/button_User"
+        android:layout_toLeftOf="@+id/button_Discover"
+        android:layout_marginRight="45dp"
+        android:contentDescription="@string/button_profile"
+        android:src="@drawable/button_profile"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/button_Discover"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_alignTop="@+id/button_User"
+        android:contentDescription="@string/button_discover"
+        android:src="@drawable/button_discover"
+        android:clickable="true" />
+    //bot bar end
+	
+</RelativeLayout>

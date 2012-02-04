@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    //top bar start
+    <ImageView
+        android:id="@+id/image_TopBar"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/image_main_bar"
+        android:src="@drawable/image_main_bar" />
+
+    <ImageView
+        android:id="@+id/button_Back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@string/button_back"
+        android:src="@drawable/button_back" 
+        android:clickable="true"/>
+    //top bar end 
+    <TextView
+        android:id="@+id/label_Rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_TopBar"
+        android:layout_marginTop="14dp"
+        android:text="@string/label_rate"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/purple" />
+
+	//rate buttons start
+    <ImageView
+        android:id="@+id/image_Rate1"
+        android:layout_width="20dp"
+        android:layout_height="26dp"
+        android:layout_alignTop="@+id/label_Rate"
+        android:layout_toRightOf="@+id/label_Rate"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/image_rate"
+        android:src="@drawable/button_onion_blank" 
+        android:clickable="true" />
+
+   	<ImageView
+      	android:id="@+id/image_Rate2"
+        android:layout_width="20dp"
+        android:layout_height="26dp"
+        android:layout_alignTop="@+id/image_Rate1"
+        android:layout_toRightOf="@+id/image_Rate1"
+        android:layout_marginLeft="20dp"
+    	android:contentDescription="@string/image_rate"
+        android:src="@drawable/button_onion_blank"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/image_Rate3"
+        android:layout_width="20dp"
+        android:layout_height="26dp"
+        android:layout_alignTop="@+id/image_Rate1"
+        android:layout_toRightOf="@+id/image_Rate2"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/image_rate"
+        android:src="@drawable/button_onion_blank"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/image_Rate4"
+        android:layout_width="20dp"
+        android:layout_height="26dp"
+        android:layout_alignTop="@+id/image_Rate1"
+        android:layout_toRightOf="@+id/image_Rate3"
+        android:layout_marginLeft="20dp"
+	    android:contentDescription="@string/image_rate"
+    	android:src="@drawable/button_onion_blank"
+    	android:clickable="true" />
+
+	<ImageView
+    	android:id="@+id/image_Rate5"
+        android:layout_width="20dp"
+        android:layout_height="26dp"
+        android:layout_alignTop="@+id/image_Rate1"
+        android:layout_toRightOf="@+id/image_Rate4"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/image_rate"
+        android:src="@drawable/button_onion_blank"
+        android:clickable="true" />
+    //rate buttons end
+    
+ 	<ImageView
+	    android:id="@+id/image_CommentBox"
+        android:layout_width="290dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/label_Rate"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/image_box_tab" 
+        android:src="@drawable/box_tab"/>
+        <TextView
+        android:id="@+id/label_Comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/image_CommentBox"
+        android:layout_alignTop="@+id/image_CommentBox"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:text="@string/label_comment"
+        android:textColor="@color/white"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <EditText
+        android:id="@+id/input_Comment"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/label_Comment"
+        android:layout_marginTop="15dp"
+        android:inputType="textMultiLine"
+        android:hint="@string/input_comment_hint" >
+        <requestFocus />
+    </EditText>
+   
+    <Button
+        android:id="@+id/button_Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/image_CommentBox"
+        android:layout_below="@+id/image_CommentBox"
+        android:layout_marginTop="5dp"
+        android:text="@string/button_cancel" />
+
+    <Button
+        android:id="@+id/button_Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignRight="@+id/image_CommentBox"
+        android:layout_below="@+id/image_CommentBox"
+        android:layout_marginTop="5dp"
+        android:text="@string/button_submit" />
+    
+	//bot bar start
+    <ImageView
+        android:id="@+id/image_BotBar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/image_main_bar"
+        android:src="@drawable/image_main_bar" />
+
+    <ImageView
+        android:id="@+id/button_User"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/button_user"
+        android:src="@drawable/button_user" 
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/button_Chef"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/button_User"
+        android:layout_toRightOf="@+id/button_User"
+        android:layout_marginLeft="45dp"
+        android:contentDescription="@string/button_chef"
+        android:src="@drawable/button_chef"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/button_Profile"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/button_User"
+        android:layout_toLeftOf="@+id/button_Discover"
+        android:layout_marginRight="45dp"
+        android:contentDescription="@string/button_profile"
+        android:src="@drawable/button_profile"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/button_Discover"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_alignTop="@+id/button_User"
+        android:contentDescription="@string/button_discover"
+        android:src="@drawable/button_discover"
+        android:clickable="true" />
+    //bot bar end
+	
+</RelativeLayout>

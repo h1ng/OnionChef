@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    //top bar start
+    <ImageView
+        android:id="@+id/image_TopBar"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/image_main_bar"
+        android:src="@drawable/image_main_bar" />
+
+    <ImageView
+        android:id="@+id/button_Back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@string/button_back"
+        android:src="@drawable/button_back" 
+        android:clickable="true"/>
+
+    <Button
+        android:id="@+id/button_CheckIn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/button_Back"
+        android:layout_toRightOf="@+id/button_Back"
+        android:layout_marginLeft="10dp"
+        android:text="@string/button_checkin" />
+
+    <ImageView
+        android:id="@+id/image_RestFrameSmall"
+        android:layout_width="50dp"
+        android:layout_height="46dp"
+        android:layout_toLeftOf="@+id/label_RestName"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/image_frame_restaurant_logo"
+        android:src="@drawable/frame_restaurant_logo" />
+
+    <TextView
+        android:id="@+id/label_RestName"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:text="RestName"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/label_Address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/label_RestName"
+        android:layout_below="@+id/label_RestName"
+        android:text="Address" />
+
+    <TextView
+        android:id="@+id/label_PhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/label_RestName"
+        android:layout_below="@+id/label_Address"
+        android:text="xxx-xxx-xxxx"
+        android:clickable="true"/> 
+   //top bar end
+
+    <TextView
+        android:id="@+id/label_MostPopular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_TopBar"
+        android:text="@string/lable_mostpopular"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/purple" />
+
+    <ImageView
+        android:id="@+id/image_DishBig"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label_MostPopular"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/image_dishbig"
+        android:src="@drawable/frame_dishes"
+        android:clickable="true" />
+
+    //dishes scroll start
+    <HorizontalScrollView
+        android:id="@+id/HorizontalScrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_DishBig" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/image_Dish1"
+                android:layout_width="105dp"
+                android:layout_height="97dp"
+                android:contentDescription="@string/image_dish"
+                android:src="@drawable/frame_dishes"
+                android:clickable="true" />
+
+            <ImageView
+                android:id="@+id/image_Dish2"
+                android:layout_width="105dp"
+                android:layout_height="97dp"
+                android:contentDescription="@string/image_dish"
+                android:src="@drawable/frame_dishes"
+                android:clickable="true" />
+
+            <ImageView
+                android:id="@+id/image_Dish3"
+                android:layout_width="105dp"
+                android:layout_height="97dp"
+                android:contentDescription="@string/image_dish"
+                android:src="@drawable/frame_dishes"
+                android:clickable="true" />
+            
+            <ImageView
+                android:id="@+id/image_Dish4"
+                android:layout_width="105dp"
+                android:layout_height="97dp"
+                android:contentDescription="@string/image_dish"
+                android:src="@drawable/frame_dishes"
+                android:clickable="true" />
+            
+        </LinearLayout>
+    </HorizontalScrollView>
+    //dishes scroll end
+
+	//bot bar start
+    <ImageView
+        android:id="@+id/image_BotBar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/image_main_bar"
+        android:src="@drawable/image_main_bar" />
+
+    <ImageView
+        android:id="@+id/button_User"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/button_user"
+        android:src="@drawable/button_user" 
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/button_Chef"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/button_User"
+        android:layout_toRightOf="@+id/button_User"
+        android:layout_marginLeft="45dp"
+        android:contentDescription="@string/button_chef"
+        android:src="@drawable/button_chef"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/button_Profile"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/button_User"
+        android:layout_toLeftOf="@+id/button_Discover"
+        android:layout_marginRight="45dp"
+        android:contentDescription="@string/button_profile"
+        android:src="@drawable/button_profile"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/button_Discover"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_alignTop="@+id/button_User"
+        android:contentDescription="@string/button_discover"
+        android:src="@drawable/button_discover"
+        android:clickable="true" />
+    //bot bar end
+
+</RelativeLayout>

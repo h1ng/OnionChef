@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    //top bar start
+    <ImageView
+        android:id="@+id/image_TopBar"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:contentDescription="@string/image_main_bar"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_main_bar" />
+
+    <ImageView
+        android:id="@+id/button_Back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@string/button_back"
+        android:src="@drawable/button_back" 
+        android:clickable="true"/>
+
+    <Button
+        android:id="@+id/button_EditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/button_Back"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:text="@string/button_editprofile" />
+    //top bar end 
+
+	//scroll view for entire screen (top bottom)
+	<ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/image_TopBar" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" > 
+
+			<ImageView
+	        	android:id="@+id/image_ProfilePic"
+        		android:layout_width="130dp"
+        		android:layout_height="150dp"
+        		android:layout_below="@+id/image_TopBar"
+        		android:contentDescription="@string/image_profilepic" 
+        		android:clickable="true"/>
+				//android:src=""
+
+			<TextView
+	    		android:id="@+id/label_RealName"
+	    		android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:layout_toRightOf="@+id/image_ProfilePic"
+	    		android:layout_marginLeft="10dp"
+	    		android:layout_marginTop="5dp"
+	    		android:text="First name, Last name"
+	    		android:textAppearance="?android:attr/textAppearanceMedium"
+	    		android:textColor="@color/black" />
+
+			<TextView
+	    		android:id="@+id/label_UserName"
+	    		android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:layout_below="@+id/label_RealName"
+	    		android:layout_marginTop="5dp"
+	    		android:layout_alignLeft="@+id/label_RealName"
+	    		android:text="UserName"
+	    		android:textAppearance="?android:attr/textAppearanceMedium"
+	    		android:textColor="@color/black" />
+	
+			<TextView
+	    		android:id="@+id/label_Age"
+	    		android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:layout_alignLeft="@+id/label_RealName"
+	    		android:layout_below="@+id/label_UserName"
+	    		android:layout_marginTop="5dp"
+	    		android:text="@string/label_age"
+	    		android:textAppearance="?android:attr/textAppearanceMedium"
+	    		android:textColor="@color/black" />
+	
+			<TextView
+	    		android:id="@+id/label_Gender"
+	    		android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:layout_below="@+id/label_Age"
+	    		android:layout_marginTop="5dp"
+	    		android:layout_alignLeft="@+id/label_RealName"
+	    		android:text="Boy/Girl"
+	    		android:textAppearance="?android:attr/textAppearanceMedium"
+	    		android:textColor="@color/black" />
+   
+			<TextView
+	    		android:id="@+id/label_Location"
+	    		android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:layout_alignLeft="@+id/label_RealName"
+	    		android:layout_below="@+id/label_Gender"
+	    		android:layout_marginTop="5dp"
+	    		android:text="@string/label_homelocation"
+	    		android:textAppearance="?android:attr/textAppearanceMedium"
+	    		android:textColor="@color/black" />
+
+			<TextView
+			    android:id="@+id/label_AboutMe"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignLeft="@+id/input_AboutMe"
+			    android:layout_below="@+id/image_ProfilePic"
+			    android:layout_marginTop="10dp"
+			    android:text="@string/label_aboutme"
+			    android:textAppearance="?android:attr/textAppearanceMedium"
+			    android:textColor="@color/purple" />
+
+			<EditText
+			    android:id="@+id/input_AboutMe"
+			    android:layout_width="250dp"
+			    android:layout_height="100dp"
+			    android:layout_below="@+id/label_AboutMe"
+			    android:layout_centerHorizontal="true"
+			    android:clickable="false"
+			    android:hint="@string/input_aboutme_hint"
+			    android:inputType="textMultiLine" >
+		    	<requestFocus />
+			</EditText>
+
+		//fav box top start
+		<ImageView
+		    android:id="@+id/image_FavBoxTop"
+		    android:layout_width="fill_parent"
+		    android:layout_height="99dp"
+		    android:layout_below="@+id/input_AboutMe"
+		    android:layout_marginTop="10dp"
+		    android:contentDescription="@string/image_favboxtop"
+		    android:scaleType="centerCrop"
+		    android:src="@drawable/box_favdishtop" />
+
+			<TextView
+	    		android:id="@+id/label_Favourites"
+	    		android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:layout_alignLeft="@+id/image_ScrollBar1"
+	    		android:layout_marginLeft="12dp"
+	    		android:layout_alignTop="@+id/image_FavBoxTop"
+	    		android:layout_marginTop="3dp"
+	    		android:text="@string/label_favourites"
+	    		android:textAppearance="?android:attr/textAppearanceMedium"
+	    		android:textColor="@color/white" />
+	
+			<ImageView
+    		    android:id="@+id/image_ScrollBar1"
+        		android:layout_width="fill_parent"
+        		android:layout_height="60dp"
+        		android:scaleType="centerCrop"
+        		android:layout_alignBottom="@+id/image_FavBoxTop"
+        		android:layout_marginBottom="1dp"
+        		android:contentDescription="@string/image_scroll_bar"
+        		android:src="@drawable/image_scroll_bar" />	
+        		
+			<ImageView
+                android:id="@+id/image_Dish1"
+                android:layout_width="68dp"
+                android:layout_height="58dp"
+                android:layout_alignTop="@+id/image_ScrollBar1"
+                android:layout_marginTop="1dp"
+                android:layout_alignLeft="@+id/image_ScrollBar1"
+                android:layout_marginLeft="5dp"
+                android:contentDescription="@string/image_dish"
+                android:src="@drawable/frame_dishes"
+                android:clickable="true" />
+	
+			<TextView
+        		android:id="@+id/label_DishName1"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignTop="@+id/image_Dish1"
+        		android:layout_toRightOf="@+id/image_Dish1"
+        		android:layout_marginLeft="5dp"
+        		android:text="Dish Name"
+        		android:textColor="@color/black" />
+
+    		<TextView
+        		android:id="@+id/label_recommendedBy1"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/label_DishName1"
+        		android:layout_below="@+id/label_DishName1"
+        		android:text="@string/label_recommendedby"
+        		android:textColor="@color/black" />
+
+    		<ImageView
+        		android:id="@+id/button_UnFavourite1"
+        		android:layout_width="20dp"
+        		android:layout_height="20dp"
+        		android:layout_alignRight="@+id/image_ScrollBar1"
+        		android:layout_marginRight="5dp"
+        		android:layout_alignTop="@+id/image_Dish1"
+        		android:contentDescription="@string/button_favourite"
+        		android:src="@drawable/button_favourite" />
+    		//fav box top end
+    
+		    //fav box mid start (multiplyable)	
+			<ImageView
+			    android:id="@+id/image_FavBoxMid"
+			    android:layout_width="fill_parent"
+			    android:layout_height="62dp"
+			    android:layout_below="@+id/image_FavBoxTop"
+			    android:scaleType="center"
+			    android:contentDescription="@string/image_favboxmid"
+			    android:src="@drawable/box_favdishmid" />
+	
+			<ImageView
+    		    android:id="@+id/image_ScrollBar2"
+        		android:layout_width="fill_parent"
+        		android:layout_height="60dp"
+        		android:scaleType="centerCrop"
+        		android:layout_alignTop="@+id/image_FavBoxMid"
+        		android:layout_marginTop="1dp"
+        		android:contentDescription="@string/image_scroll_bar"
+        		android:src="@drawable/image_scroll_bar" />	
+	
+			<ImageView
+                android:id="@+id/image_Dish2"
+                android:layout_width="68dp"
+                android:layout_height="58dp"
+                android:layout_alignTop="@+id/image_ScrollBar2"
+                android:layout_marginTop="1dp"
+                android:layout_alignLeft="@+id/image_ScrollBar2"
+                android:layout_marginLeft="5dp"
+                android:contentDescription="@string/image_dish"
+                android:src="@drawable/frame_dishes"
+                android:clickable="true" />
+	
+			<TextView
+        		android:id="@+id/label_DishName2"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignTop="@+id/image_Dish2"
+        		android:layout_toRightOf="@+id/image_Dish2"
+        		android:layout_marginLeft="5dp"
+        		android:text="Dish Name"
+        		android:textColor="@color/black" />
+
+    		<TextView
+        		android:id="@+id/label_recommendedBy2"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/label_DishName2"
+        		android:layout_below="@+id/label_DishName2"
+        		android:text="@string/label_recommendedby"
+        		android:textColor="@color/black" />
+
+		    <ImageView
+		        android:id="@+id/button_UnFavourite2"
+		        android:layout_width="20dp"
+		        android:layout_height="20dp"
+        		android:layout_alignRight="@+id/image_ScrollBar2"
+        		android:layout_marginRight="5dp"
+        		android:layout_alignTop="@+id/image_Dish2"
+        		android:contentDescription="@string/button_favourite"
+        		android:src="@drawable/button_favourite" />
+			//fav box mid end
+	
+			//fav box bot start
+			<ImageView
+			    android:id="@+id/image_FavBoxBot"
+			    android:layout_width="fill_parent"
+			    android:layout_height="71dp"
+			    android:layout_below="@+id/image_FavBoxMid"
+			    android:scaleType="center"
+			    android:contentDescription="@string/image_favboxbot"
+			    android:src="@drawable/box_favdishbot" />
+	
+			<ImageView
+    		    android:id="@+id/image_ScrollBar3"
+        		android:layout_width="fill_parent"
+        		android:layout_height="60dp"
+        		android:scaleType="centerCrop"
+        		android:layout_alignTop="@+id/image_FavBoxBot"
+        		android:layout_marginTop="1dp"
+        		android:contentDescription="@string/image_scroll_bar"
+        		android:src="@drawable/image_scroll_bar" />	
+	
+			<ImageView
+                android:id="@+id/image_Dish3"
+                android:layout_width="68dp"
+                android:layout_height="58dp"
+                android:layout_alignTop="@+id/image_ScrollBar3"
+                android:layout_marginTop="1dp"
+                android:layout_alignLeft="@+id/image_ScrollBar3"
+                android:layout_marginLeft="5dp"
+                android:contentDescription="@string/image_dish"
+                android:src="@drawable/frame_dishes"
+                android:clickable="true" />
+	
+			<TextView
+        		android:id="@+id/label_DishName3"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignTop="@+id/image_Dish3"
+        		android:layout_toRightOf="@+id/image_Dish3"
+        		android:layout_marginLeft="5dp"
+        		android:text="Dish Name"
+        		android:textColor="@color/black" />
+
+    		<TextView
+        		android:id="@+id/label_RecommendedBy3"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignLeft="@+id/label_DishName3"
+        		android:layout_below="@+id/label_DishName3"
+        		android:text="@string/label_recommendedby"
+        		android:textColor="@color/black" />
+
+    		<ImageView
+        		android:id="@+id/button_UnFavourite3"
+        		android:layout_width="20dp"
+        		android:layout_height="20dp"
+        		android:layout_alignRight="@+id/image_ScrollBar3"
+        		android:layout_marginRight="5dp"
+        		android:layout_alignTop="@+id/image_Dish3"
+        		android:contentDescription="@string/button_favourite"
+        		android:src="@drawable/button_favourite" />
+				//fav box bot end
+    
+		</RelativeLayout>
+	</ScrollView>
+	
+	//bot bar start
+    <ImageView
+        android:id="@+id/image_BotBar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/image_main_bar"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_main_bar" />
+
+    <ImageView
+        android:id="@+id/button_User"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/button_user"
+        android:src="@drawable/button_user" 
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/button_Chef"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/button_User"
+        android:layout_toRightOf="@+id/button_User"
+        android:layout_marginLeft="45dp"
+        android:contentDescription="@string/button_chef"
+        android:src="@drawable/button_chef"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/button_Profile"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/button_User"
+        android:layout_toLeftOf="@+id/button_Discover"
+        android:layout_marginRight="45dp"
+        android:contentDescription="@string/button_profile"
+        android:src="@drawable/button_profile"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/button_Discover"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_alignTop="@+id/button_User"
+        android:contentDescription="@string/button_discover"
+        android:src="@drawable/button_discover"
+        android:clickable="true" />
+    //bot bar end
+    
+</RelativeLayout>

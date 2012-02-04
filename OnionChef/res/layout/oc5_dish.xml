@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    //top bar start
+    <ImageView
+        android:id="@+id/image_TopBar"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/image_main_bar"
+        android:src="@drawable/image_main_bar" />
+
+    <ImageView
+        android:id="@+id/button_Back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@string/button_back"
+        android:src="@drawable/button_back"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/button_UploadPic"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/button_Favourite"
+        android:layout_marginRight="20dp"
+        android:contentDescription="@string/button_upload_pic"
+        android:src="@drawable/button_photo"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/button_Favourite"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@string/button_favourite"
+        android:src="@drawable/button_favourite"
+        android:clickable="true" />
+    //top bar end
+
+	//scroll view for entire screen (top bottom)
+    <ScrollView
+        android:id="@+id/ScollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/image_TopBar" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+    
+            <TextView
+        		android:id="@+id/label_DishRest"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="Dish Name @ Rest Name"
+        		android:textAppearance="?android:attr/textAppearanceLarge"
+        		android:textColor="@color/purple" />
+            
+            //dish pictures scrolling group start (for multiple pictures of a single dish)
+    		<HorizontalScrollView
+        		android:id="@+id/HorizontalScrollView1"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_below="@+id/label_DishRest" >
+
+        		<LinearLayout
+            	android:id="@+id/LinearLayout1"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content" >
+
+            		<ImageView
+                		android:id="@+id/image_DishBig0"
+                		android:layout_width="wrap_content"
+                		android:layout_height="wrap_content"
+                		android:contentDescription="@string/image_dishbig"
+                		android:src="@drawable/frame_dishes" />
+
+            		<ImageView
+	                	android:id="@+id/image_DishBig1"
+                		android:layout_width="wrap_content"
+                		android:layout_height="wrap_content"
+                		android:contentDescription="@string/image_dishbig"
+                		android:src="@drawable/frame_dishes" />
+
+	            	<ImageView
+    	            	android:id="@+id/image_DishBig2"
+        	        	android:layout_width="wrap_content"
+            	    	android:layout_height="wrap_content"
+                		android:contentDescription="@string/image_dishbig"
+                		android:src="@drawable/frame_dishes" />
+        		</LinearLayout>
+    		</HorizontalScrollView>
+    		//dish pictures scrolling group end
+
+			//overall rating start
+    		<ImageView
+        		android:id="@+id/image_Rate1"
+        		android:layout_width="20dp"
+        		android:layout_height="26dp"
+        		android:layout_below="@+id/HorizontalScrollView1"
+        		android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_blank" />
+
+    		<ImageView
+        		android:id="@+id/image_Rate2"
+        		android:layout_width="20dp"
+        		android:layout_height="26dp"
+        		android:layout_alignTop="@+id/image_Rate1"
+        		android:layout_toRightOf="@+id/image_Rate1"
+        		android:layout_marginLeft="5dp"
+    	    	android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_blank" />
+
+    		<ImageView
+        		android:id="@+id/image_Rate3"
+        		android:layout_width="20dp"
+        		android:layout_height="26dp"
+        		android:layout_alignTop="@+id/image_Rate1"
+        		android:layout_toRightOf="@+id/image_Rate2"
+        		android:layout_marginLeft="5dp"
+        		android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_blank" />
+
+    		<ImageView
+        		android:id="@+id/image_Rate4"
+        		android:layout_width="20dp"
+        		android:layout_height="26dp"
+        		android:layout_alignTop="@+id/image_Rate1"
+        		android:layout_toRightOf="@+id/image_Rate3"
+        		android:layout_marginLeft="5dp"
+        		android:contentDescription="@string/image_rate"
+    	    	android:src="@drawable/button_onion_blank" />
+
+	    	<ImageView
+    	    	android:id="@+id/image_Rate5"
+        		android:layout_width="20dp"
+        		android:layout_height="25.6dp"
+        		android:layout_alignTop="@+id/image_Rate1"
+        		android:layout_toRightOf="@+id/image_Rate4"
+        		android:layout_marginLeft="5dp"
+        		android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_blank" />
+			//overall rating end
+			
+    		<Button
+    		    android:id="@+id/button_RateComment"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="40dp"
+    		    android:layout_alignParentRight="true"
+    		    android:layout_alignTop="@+id/image_Rate1"
+    		    android:text="@string/button_ratecomment" />
+
+			//comment group start    		
+    		<ImageView
+    		    android:id="@+id/image_ScrollBar1"
+        		android:layout_width="fill_parent"
+        		android:layout_height="62dp"
+        		android:scaleType="centerCrop"
+        		android:layout_below="@+id/button_RateComment"
+        		android:contentDescription="@string/image_scroll_bar"
+        		android:src="@drawable/image_scroll_bar" />
+
+    		<ImageView
+	        	android:id="@+id/button_UserPic1"
+        		android:layout_width="45dp"
+        		android:layout_height="50dp"
+        		android:layout_alignTop="@+id/image_ScrollBar1"
+        		android:contentDescription="@string/button_useraction" 
+        		android:clickable="true"/>
+    			//android:src=""
+    		//profile pic of a user, clickable to open users profile/report
+
+    		<TextView
+    		    android:id="@+id/label_UserName1"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignBottom="@+id/image_ScrollBar1"
+    		    android:text="User Name"
+    		    android:textColor="@color/black" 
+    		    android:clickable="true" 
+    		    android:textSize="10dp"/>
+    		//clickable to open users profile/report
+       		
+    		<ImageView
+        		android:id="@+id/image_UserRate1"
+        		android:layout_width="11.3dp"
+        		android:layout_height="15dp"
+        		android:layout_alignTop="@+id/image_ScrollBar1"
+        		android:layout_toRightOf="@+id/button_UserPic1"
+        		android:layout_marginLeft="5dp"
+        		android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_blank" />
+
+    		<ImageView
+        		android:id="@+id/image_UserRate2"
+        		android:layout_width="11.3dp"
+        		android:layout_height="15dp"
+        		android:layout_alignTop="@+id/image_UserRate1"
+	        	android:layout_toRightOf="@+id/image_UserRate1"
+	        	android:layout_marginLeft="5dp"
+	        	android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_blank" />
+
+    		<ImageView
+        		android:id="@+id/image_UserRate3"
+        		android:layout_width="11.3dp"
+        		android:layout_height="15dp"
+        		android:layout_alignTop="@+id/image_UserRate1"
+        		android:layout_toRightOf="@+id/image_UserRate2"
+        		android:layout_marginLeft="5dp"
+        		android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_blank" />
+
+    		<ImageView
+        		android:id="@+id/image_UserRate4"
+        		android:layout_width="11.3dp"
+        		android:layout_height="15dp"
+        		android:layout_alignTop="@+id/image_UserRate1"
+        		android:layout_toRightOf="@+id/image_UserRate3"
+        		android:layout_marginLeft="5dp"
+	        	android:contentDescription="@string/image_rate"
+    	    	android:src="@drawable/button_onion_blank" />
+
+	    	<ImageView
+    	    	android:id="@+id/image_UserRate5"
+        		android:layout_width="11.3dp"
+        		android:layout_height="15dp"
+        		android:layout_alignTop="@+id/image_UserRate1"
+        		android:layout_toRightOf="@+id/image_UserRate4"
+        		android:layout_marginLeft="5dp"
+        		android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_blank" />
+	    	
+	    	<TextView
+    		    android:id="@+id/label_Comment1"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/image_UserRate1"
+    		    android:layout_toRightOf="@+id/button_UserPic1"
+    		    android:text="Comment"
+    		    android:textColor="@color/black" 
+    		    android:clickable="true" 
+    		    android:textSize="10dp"/>
+	    	//clickable to open user profile/report
+    			    
+    		<TextView
+    		    android:id="@+id/label_Timestamp1"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignTop="@+id/image_ScrollBar1"
+    		    android:layout_alignParentRight="true"
+    		    android:text="Time"
+    		    android:textColor="@color/black" 
+    		    android:clickable="true" 
+    		    android:textSize="10dp"/>
+    		//clickable to open user profile/report
+    		
+    		<ImageView
+	        	android:id="@+id/image_Rank1"
+        		android:layout_width="11.3dp"
+        		android:layout_height="15dp"
+        		android:layout_alignBottom="@+id/image_ScrollBar1"
+    		    android:layout_alignParentRight="true"
+        		android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_purple" />
+    		
+    		<TextView
+    		    android:id="@+id/label_Rank1"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignBottom="@+id/image_ScrollBar1"
+    		    android:layout_toLeftOf="@+id/image_Rank1"
+    		    android:layout_marginRight="5dp"
+    		    android:text="Rank"
+    		    android:textColor="@color/black" 
+    		    android:clickable="true" 
+    		    android:textSize="10dp"/>
+    		//clickable to open user profile/report    		//comment group end
+    		
+ 			//comment group1 start    		
+    		<ImageView
+    		    android:id="@+id/image_ScrollBar1a"
+        		android:layout_width="fill_parent"
+        		android:layout_height="62dp"
+        		android:scaleType="centerCrop"
+        		android:layout_below="@+id/image_ScrollBar1"
+        		android:contentDescription="@string/image_scroll_bar"
+        		android:src="@drawable/image_scroll_bar" />
+
+    		<ImageView
+	        	android:id="@+id/button_UserPic1a"
+        		android:layout_width="45dp"
+        		android:layout_height="50dp"
+        		android:layout_alignTop="@+id/image_ScrollBar1a"
+        		android:contentDescription="@string/button_useraction" 
+        		android:clickable="true"/>
+    			//android:src=""
+    		//profile pic of a user, clickable to open users profile/report
+
+    		<TextView
+    		    android:id="@+id/label_UserName1a"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignBottom="@+id/image_ScrollBar1a"
+    		    android:text="User Name"
+    		    android:textColor="@color/black" 
+    		    android:clickable="true" 
+    		    android:textSize="10dp"/>
+    		//clickable to open users profile/report
+       		
+    		<ImageView
+        		android:id="@+id/image_UserRate1a"
+        		android:layout_width="11.3dp"
+        		android:layout_height="15dp"
+        		android:layout_alignTop="@+id/image_ScrollBar1a"
+        		android:layout_toRightOf="@+id/button_UserPic1a"
+        		android:layout_marginLeft="5dp"
+        		android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_blank" />
+
+    		<ImageView
+        		android:id="@+id/image_UserRate2a"
+        		android:layout_width="11.3dp"
+        		android:layout_height="15dp"
+        		android:layout_alignTop="@+id/image_UserRate1a"
+	        	android:layout_toRightOf="@+id/image_UserRate1a"
+	        	android:layout_marginLeft="5dp"
+	        	android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_blank" />
+
+    		<ImageView
+        		android:id="@+id/image_UserRate3a"
+        		android:layout_width="11.3dp"
+        		android:layout_height="15dp"
+        		android:layout_alignTop="@+id/image_UserRate1a"
+        		android:layout_toRightOf="@+id/image_UserRate2a"
+        		android:layout_marginLeft="5dp"
+        		android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_blank" />
+
+    		<ImageView
+        		android:id="@+id/image_UserRate4a"
+        		android:layout_width="11.3dp"
+        		android:layout_height="15dp"
+        		android:layout_alignTop="@+id/image_UserRate1a"
+        		android:layout_toRightOf="@+id/image_UserRate3a"
+        		android:layout_marginLeft="5dp"
+	        	android:contentDescription="@string/image_rate"
+    	    	android:src="@drawable/button_onion_blank" />
+
+	    	<ImageView
+    	    	android:id="@+id/image_UserRate5a"
+        		android:layout_width="11.3dp"
+        		android:layout_height="15dp"
+        		android:layout_alignTop="@+id/image_UserRate1a"
+        		android:layout_toRightOf="@+id/image_UserRate4a"
+        		android:layout_marginLeft="5dp"
+        		android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_blank" />
+	    	
+	    	<TextView
+    		    android:id="@+id/label_Comment1a"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/image_UserRate1a"
+    		    android:layout_toRightOf="@+id/button_UserPic1a"
+    		    android:text="Comment"
+    		    android:textColor="@color/black" 
+    		    android:clickable="true" 
+    		    android:textSize="10dp"/>
+	    	//clickable to open user profile/report
+    			    
+    		<TextView
+    		    android:id="@+id/label_Timestamp1a"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignTop="@+id/image_ScrollBar1a"
+    		    android:layout_alignParentRight="true"
+    		    android:text="Time"
+    		    android:textColor="@color/black" 
+    		    android:clickable="true" 
+    		    android:textSize="10dp"/>
+    		//clickable to open user profile/report
+    		
+    		<ImageView
+	        	android:id="@+id/image_Rank1a"
+        		android:layout_width="11.3dp"
+        		android:layout_height="15dp"
+        		android:layout_alignBottom="@+id/image_ScrollBar1a"
+    		    android:layout_alignParentRight="true"
+        		android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_purple" />
+    		
+    		<TextView
+    		    android:id="@+id/label_Rank1a"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignBottom="@+id/image_ScrollBar1a"
+    		    android:layout_toLeftOf="@+id/image_Rank1a"
+    		    android:layout_marginRight="5dp"
+    		    android:text="Rank"
+    		    android:textColor="@color/black" 
+    		    android:clickable="true" 
+    		    android:textSize="10dp"/>
+    		//clickable to open user profile/report
+    		//comment group end
+			
+			//comment group2 start    		
+    		<ImageView
+    		    android:id="@+id/image_ScrollBar1b"
+        		android:layout_width="fill_parent"
+        		android:layout_height="62dp"
+        		android:scaleType="centerCrop"
+        		android:layout_below="@+id/image_ScrollBar1a"
+        		android:contentDescription="@string/image_scroll_bar"
+        		android:src="@drawable/image_scroll_bar" />
+
+    		<ImageView
+	        	android:id="@+id/button_UserPic1b"
+        		android:layout_width="45dp"
+        		android:layout_height="50dp"
+        		android:layout_alignTop="@+id/image_ScrollBar1b"
+        		android:contentDescription="@string/button_useraction" 
+        		android:clickable="true"/>
+    			//android:src=""
+    		//profile pic of a user, clickable to open users profile/report
+
+    		<TextView
+    		    android:id="@+id/label_UserName1b"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignBottom="@+id/image_ScrollBar1b"
+    		    android:text="User Name"
+    		    android:textColor="@color/black" 
+    		    android:clickable="true" 
+    		    android:textSize="10dp"/>
+    		//clickable to open users profile/report
+       		
+    		<ImageView
+        		android:id="@+id/image_UserRate1b"
+        		android:layout_width="11.3dp"
+        		android:layout_height="15dp"
+        		android:layout_alignTop="@+id/image_ScrollBar1b"
+        		android:layout_toRightOf="@+id/button_UserPic1b"
+        		android:layout_marginLeft="5dp"
+        		android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_blank" />
+
+    		<ImageView
+        		android:id="@+id/image_UserRate2b"
+        		android:layout_width="11.3dp"
+        		android:layout_height="15dp"
+        		android:layout_alignTop="@+id/image_UserRate1b"
+	        	android:layout_toRightOf="@+id/image_UserRate1b"
+	        	android:layout_marginLeft="5dp"
+	        	android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_blank" />
+
+    		<ImageView
+        		android:id="@+id/image_UserRate3b"
+        		android:layout_width="11.3dp"
+        		android:layout_height="15dp"
+        		android:layout_alignTop="@+id/image_UserRate1b"
+        		android:layout_toRightOf="@+id/image_UserRate2b"
+        		android:layout_marginLeft="5dp"
+        		android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_blank" />
+
+    		<ImageView
+        		android:id="@+id/image_UserRate4b"
+        		android:layout_width="11.3dp"
+        		android:layout_height="15dp"
+        		android:layout_alignTop="@+id/image_UserRate1b"
+        		android:layout_toRightOf="@+id/image_UserRate3b"
+        		android:layout_marginLeft="5dp"
+	        	android:contentDescription="@string/image_rate"
+    	    	android:src="@drawable/button_onion_blank" />
+
+	    	<ImageView
+    	    	android:id="@+id/image_UserRate5b"
+        		android:layout_width="11.3dp"
+        		android:layout_height="15dp"
+        		android:layout_alignTop="@+id/image_UserRate1b"
+        		android:layout_toRightOf="@+id/image_UserRate4b"
+        		android:layout_marginLeft="5dp"
+        		android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_blank" />
+	    	
+	    	<TextView
+    		    android:id="@+id/label_Comment1b"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_below="@+id/image_UserRate1"
+    		    android:layout_toRightOf="@+id/button_UserPic1b"
+    		    android:text="Comment"
+    		    android:textColor="@color/black" 
+    		    android:clickable="true" 
+    		    android:textSize="10dp"/>
+	    	//clickable to open user profile/report
+    			    
+    		<TextView
+    		    android:id="@+id/label_Timestamp1b"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignTop="@+id/image_ScrollBar1b"
+    		    android:layout_alignParentRight="true"
+    		    android:text="Time"
+    		    android:textColor="@color/black" 
+    		    android:clickable="true" 
+    		    android:textSize="10dp"/>
+    		//clickable to open user profile/report
+    		
+    		<ImageView
+	        	android:id="@+id/image_Rank1b"
+        		android:layout_width="11.3dp"
+        		android:layout_height="15dp"
+        		android:layout_alignBottom="@+id/image_ScrollBar1b"
+    		    android:layout_alignParentRight="true"
+        		android:contentDescription="@string/image_rate"
+        		android:src="@drawable/button_onion_purple" />
+    		
+    		<TextView
+    		    android:id="@+id/label_Rank1b"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content"
+    		    android:layout_alignBottom="@+id/image_ScrollBar1b"
+    		    android:layout_toLeftOf="@+id/image_Rank1b"
+    		    android:layout_marginRight="5dp"
+    		    android:text="Rank"
+    		    android:textColor="@color/black" 
+    		    android:clickable="true" 
+    		    android:textSize="10dp"/>
+    		//clickable to open user profile/report
+    		//comment group end
+    		
+        </RelativeLayout>
+    </ScrollView>
+
+	//bot bar start
+    <ImageView
+        android:id="@+id/image_BotBar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/image_main_bar"
+        android:src="@drawable/image_main_bar" />
+
+    <ImageView
+        android:id="@+id/button_User"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/button_user"
+        android:src="@drawable/button_user" 
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/button_Chef"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/button_User"
+        android:layout_toRightOf="@+id/button_User"
+        android:layout_marginLeft="45dp"
+        android:contentDescription="@string/button_chef"
+        android:src="@drawable/button_chef"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/button_Profile"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/button_User"
+        android:layout_toLeftOf="@+id/button_Discover"
+        android:layout_marginRight="45dp"
+        android:contentDescription="@string/button_profile"
+        android:src="@drawable/button_profile"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/button_Discover"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_alignTop="@+id/button_User"
+        android:contentDescription="@string/button_discover"
+        android:src="@drawable/button_discover"
+        android:clickable="true" />
+    //bot bar end
+    
+</RelativeLayout>

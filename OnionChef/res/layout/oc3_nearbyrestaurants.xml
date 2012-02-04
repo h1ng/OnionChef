@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    //top bar start
+    <ImageView
+        android:id="@+id/image_TopBar"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+		android:scaleType="centerCrop"
+		android:contentDescription="@string/image_main_bar"
+        android:src="@drawable/image_main_bar" />
+
+    <ImageView
+        android:id="@+id/button_Profile"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@string/button_profile"
+        android:src="@drawable/button_profile"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/button_Refresh"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/button_Profile"
+        android:layout_toRightOf="@+id/button_Profile"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/button_refresh"
+        android:src="@drawable/button_refresh"
+        android:clickable="true" />
+    //top bar end
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_TopBar" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" > 
+
+            <TextView
+                android:id="@+id/label_CurrentLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_currentlocation" />
+
+            <TextView
+                android:id="@+id/label_RestaurantsNearYou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/label_CurrentLocation"
+                android:layout_marginTop="15dp"
+                android:text="@string/label_restaurantsnearyou"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/purple" />
+			
+            //box top start
+            <ImageView
+                android:id="@+id/image_BoxTop"
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:layout_below="@+id/label_CurrentLocation"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:contentDescription="@string/image_box_top"
+                android:src="@drawable/box_top" />
+
+            <TextView
+                android:id="@+id/label_PleaseSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/image_BoxTop"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/label_pleaseselect"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            
+            <ImageView
+                android:id="@+id/image_RestFrame1"
+                android:layout_width="100dp"
+                android:layout_height="93dp"
+                android:layout_alignBottom="@+id/image_BoxTop"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="40dp"
+                android:contentDescription="@string/image_frame_restaurant_logo"
+                android:src="@drawable/frame_restaurant_logo"
+                android:clickable="true" />
+            
+            <TextView
+                android:id="@+id/label_RestName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/image_RestFrame1"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/image_RestFrame1"
+                android:layout_marginLeft="20dp"
+                android:text="RestName1"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:clickable="true" />
+            
+            <TextView
+                android:id="@+id/label_Distance1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/label_RestName1"
+                android:layout_below="@+id/label_RestName1"
+                android:text="km1" />
+            //box top end
+            
+            //start of multiplication if scrolled
+            <ImageView
+                android:id="@+id/image_BoxMid"
+                android:layout_width="wrap_content"
+                android:layout_height="105dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/image_BoxTop"
+                android:contentDescription="@string/image_box_mid"
+                android:src="@drawable/box_mid" />
+            
+            <ImageView
+                android:id="@+id/image_RestFrame2"
+                android:layout_width="100dp"
+                android:layout_height="93dp"
+                android:layout_alignTop="@+id/image_BoxMid"
+                android:layout_marginTop="6.5dp"
+                android:layout_marginLeft="40dp"
+                android:src="@drawable/frame_restaurant_logo" 
+                android:contentDescription="@string/image_frame_restaurant_logo"
+                android:clickable="true" />
+            
+            <TextView
+                android:id="@+id/label_RestName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/image_RestFrame2"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/image_RestFrame2"
+                android:layout_marginLeft="20dp"
+                android:text="RestName2"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:clickable="true" />
+            
+            <TextView
+                android:id="@+id/label_distance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/label_RestName2"
+                android:layout_below="@+id/label_RestName2"
+                android:text="km2" />
+            //end of multiplication if scrolled
+
+			//box bot start
+			//dissapears and is replaced by multiplied section if user scrolls down
+            <ImageView
+                android:id="@+id/image_BoxBot"
+                android:layout_width="wrap_content"
+                android:layout_height="106.5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/image_BoxMid"
+                android:contentDescription="@string/image_box_bot"
+                android:src="@drawable/box_bot" />
+            
+            <ImageView
+                android:id="@+id/image_RestFrame3"
+                android:layout_width="100dp"
+                android:layout_height="93dp"
+                android:layout_marginLeft="40dp"
+                android:layout_alignTop="@+id/image_BoxBot"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/image_frame_restaurant_logo"
+                android:src="@drawable/frame_restaurant_logo"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/label_RestName3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/image_RestFrame3"
+                android:layout_marginLeft="20dp"
+                android:layout_alignTop="@+id/image_RestFrame3"
+                android:layout_marginTop="22dp"
+                android:text="RestName3"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/label_distance3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/label_RestName3"
+                android:layout_below="@+id/label_RestName3"
+                android:text="km3" />         
+        
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageView
+    	android:id="@+id/image_Ad"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="center"
+        android:contentDescription="@string/image_ad"/>
+        // android:src=""
+     
+</RelativeLayout>
